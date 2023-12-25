@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "drinkTea" ;
+    src: url('./Drink_Tea.otf');
+}
+
+
 div {
     color: red;
+    font-family: "drinkTea";
 }
