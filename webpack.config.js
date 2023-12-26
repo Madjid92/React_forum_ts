@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const Progress = require('webpack').ProgressPlugin;
 
 module.exports = {
  mode: 'development',
@@ -13,10 +14,7 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-          },
+          MiniCssExtractPlugin.loader,"css-loader"
         ],
       },
 
@@ -36,7 +34,8 @@ module.exports = {
     }),
    new MiniCssExtractPlugin({
       filename : "[name].[hash].css",
-    })
+    }),
+    new Progress(),
   ],
   output: {
     filename: '[name].bundle.[hash].js',
