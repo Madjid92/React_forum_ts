@@ -1,8 +1,7 @@
 import  _  from 'lodash';
-import "../assets/styles.css";
+import "./assets/component.css";
 import printMe from './print';
-import img from "../assets/robbie-lens.png";
-
+import img from "./assets/robbie-lens.png";
 function component() {
     const element = document.createElement('div');
     const btn = document.createElement('button');
@@ -22,4 +21,5 @@ function component() {
   document.body.appendChild(component());
   const imgNode = document.createElement('img');
   imgNode.setAttribute('src', img );
+  imgNode.setAttribute('class', "robie-lens-img" );
   document.body.appendChild(imgNode)
