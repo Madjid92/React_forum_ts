@@ -7,10 +7,15 @@ module.exports = {
  mode: 'development',
   entry: {
     styles : ['./src/assets/styles.css'],
-    index: ['./src/index.js'],
+    index: ['./src/index.ts'],
   },
   module: {
     rules: [
+      {
+        test: /\.(ts|tsx)?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
       {
         test: /\.css$/i,
         use: [
@@ -27,6 +32,9 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({
