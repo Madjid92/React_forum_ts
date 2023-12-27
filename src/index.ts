@@ -2,7 +2,7 @@ import  _  from 'lodash';
 import "./assets/component.css";
 import printMe from './print';
 import img from "./assets/robbie-lens.png";
-function component() {
+ const component = ()=> {
     const element = document.createElement('div');
     const btn = document.createElement('button');
     
