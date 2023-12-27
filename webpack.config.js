@@ -7,7 +7,7 @@ module.exports = {
  mode: 'development',
   entry: {
     styles : ['./src/assets/styles.css'],
-    index: ['./src/index.ts'],
+    index: ['./src/index.tsx'],
   },
   module: {
     rules: [

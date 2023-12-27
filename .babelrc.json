@@ -17,9 +17,15 @@
         },
         "useBuiltIns": "usage",
         "corejs": "3.6.5"
-      },
-      "@babel/preset-typescript"
-    ]
+      }
+    ],
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ],
+    "@babel/preset-typescript"
   ]
   /* @TODO to be tasted later ,"env": {
       "production": {
