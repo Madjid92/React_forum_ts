@@ -7,18 +7,30 @@ module.exports = {
     },
     parserOptions : {
       ecmaVersion: "latest",
-      sourceType: "commonjs"
+      sourceType: "module"
     },
     overrides: [
       {
         files: [".eslintrc.js","webpack.config.js"],
+        parserOptions : {
+          ecmaVersion: "latest",
+          sourceType: "commonjs"
+        },
         env : {
           node : true
         }
-      }],
-    extends: "eslint:recommended",
+      },
+      {
+        files: ["src/**/*"],
+        parser: '@typescript-eslint/parser',
+        plugins: ['@typescript-eslint'],
+        extends: ['plugin:@typescript-eslint/recommended'],
+      }
+    ],
+    extends: ["eslint:recommended"],
     rules: {
         semi: "error",
         "prefer-const": "error"
-    }
+    },
+    
   };

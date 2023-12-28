@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const Progress = require('webpack').ProgressPlugin;
 
+
 module.exports = {
  mode: 'development',
   entry: {
