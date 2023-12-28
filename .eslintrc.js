@@ -1,16 +1,24 @@
 // .eslintrc.js example
 module.exports = {
-    "ignorePatterns": [".eslintrc.js", "webpack.config.js","node_modules/**/*", "dist/**/*"],
-    "env": {
-        "browser": true,
-        "es2021": true
+    ignorePatterns: ["node_modules/**/*", "dist/**/*"],
+    env: {
+        browser: true,
+        es2021: true,
     },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaVersion": "latest",
+    parserOptions : {
+      ecmaVersion: "latest",
+      sourceType: "commonjs"
     },
+    overrides: [
+      {
+        files: [".eslintrc.js","webpack.config.js"],
+        env : {
+          node : true
+        }
+      }],
+    extends: "eslint:recommended",
     rules: {
-        "semi": "error",
+        semi: "error",
         "prefer-const": "error"
     }
   };
